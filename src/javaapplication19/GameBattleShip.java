@@ -146,13 +146,13 @@ public class GameBattleShip extends JFrame {
                 y = random.nextInt(NUMBER_OF_CELLS);
             } while (aiShots.hitSamePlace(x, y));
             aiShots.add(x, y, true);
-            if (!humanShips.checkHit(x, y)) { // AI missed
+            if (!humanShips.checkHit(x, y)) { 
                 System.out.println(x + ":" + y + " AI missed.");
                 return;
-            } else { // AI hit the target - AI can shoot again
+            } else { 
                 System.out.println(x + ":" + y + " AI hit the target.");
                 if (!humanShips.checkSurvivors()) {
-                    gameOverMsg = AI_WON; //System.out.println(AI_WON);
+                    gameOverMsg = AI_WON; 
                     gameOver = true;
                 } else {
                     shootsAI();
@@ -345,14 +345,14 @@ public class GameBattleShip extends JFrame {
 
         boolean checkHit(int x, int y) {
             if (this.x == x && this.y == y) {
-                color = Color.red; // change color if hit
+                color = Color.red;
                 return true;
             }
             return false;
         }
 
         boolean isAlive() {
-            return color == Color.gray; // judged by color
+            return color == Color.gray; 
         }
 
         void paint(Graphics g, boolean hide) {

@@ -295,26 +295,6 @@ public class GameBattleShip extends JFrame {
             }
             return false;
         }
-        
-        void shipIsDie(Ship ctShip, Shot ctShot){
-            for(Cell cell : cells){
-                if(!ctShip.isAlive()){
-                    
-                }
-            }
-        }
-        
-        public ArrayList<Cell> getCells() {
-        return cells;
-    }
-
-    public void setCells(ArrayList<Cell> cells) {
-        this.cells = cells;
-    }
-
-    public void setBorders(ArrayList<Cell> borders) {
-        this.borders = borders;
-    }
 
         void paint(Graphics g, boolean hide) {
             for (Cell cell : cells) {
